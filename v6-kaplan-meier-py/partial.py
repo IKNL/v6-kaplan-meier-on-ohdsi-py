@@ -219,9 +219,7 @@ def __create_cohort_dataframe(
     cohort_table = f"cohort_{cohort_task_id}_{meta_run.node_id}"
     info(f"Using cohort table: {cohort_table}")
 
-    # Obtain the cohort IDs by combining the shared ids (equal over all nodes) with the
-    # local node id
-    cohort_id = float(f"{meta_run.node_id}{shared_cohort_id}")
+    cohort_id = float(f"{shared_cohort_id}")
     info(f"Using cohort ID: {cohort_id}")
 
     # Obtain SQL file for standard features
